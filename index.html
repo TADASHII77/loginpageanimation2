@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebrare</title>
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+   
+</head>
+
+<body>
+    <div class="container">
+     
+        <div class="animation_container">
+            <img src="house.png" class="img">
+            <img src="traingle.jpeg" class="logo">
+            <div class="headline">
+                <p>Regions <br>mortgage</p>
+                <p>Are you a New customer?</p>
+                <button id="enrollButton">Enroll Now</button>
+                <div class="tooltip" id="tooltip">
+                    <p><strong>Enroll now to:</strong></p>
+                    <ul>
+                        <li>Access your loans online</li>
+                        <li>Pay your mortgage online</li>
+                        <li>View your mortgage statements</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="input">
+            <h1 style="text-align: center; margin-bottom: 0px;">Welcome Back</h1>
+            <p style="text-align: center; margin-top: 0px; margin-bottom: 40px; font-weight: lighter; color: #999;">Sign in to your Regions MyMortgage account</p>
+
+            <div class="input-container">
+                <input type="text" id="online_id" name="online_id" placeholder=" " required>
+                <label for="online_id">Online ID</label>
+            </div>
+
+            
+            <div class="input-container password-container">
+                <input type="password" id="password" name="password" placeholder=" " required>
+                <label for="password">Password</label>
+                <span class="show-password" id="togglePassword">Show</span>
+            </div>
+
+            <button id="login">login</button>
+
+
+            <div style="display: flex; gap: 30px; margin-left:20px; color: #228b22;">
+                <p>Forget Online ID?</p>
+                <p>Forgot Password?</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
