@@ -18,10 +18,16 @@ document.addEventListener("DOMContentLoaded", function() {
         passwordInput.setAttribute("type", type);
         this.textContent = type === "password" ? "Show" : "Hide";
     });
-});
 
-document.addEventListener('DOMContentLoaded', function() {
     const loginButton = document.getElementById('login');
+
+    loginButton.addEventListener("mouseover", function() {
+        loginButton.style.backgroundColor = '#228b22';
+    });
+
+    loginButton.addEventListener("mouseout", function() {
+        loginButton.style.backgroundColor = '#C0C0C0';
+    });
 
     loginButton.addEventListener('click', function() {
         loginButton.style.backgroundColor = '#228b22';
@@ -33,10 +39,26 @@ document.addEventListener('DOMContentLoaded', function() {
         loginButton.appendChild(spinner);
 
         setTimeout(function() {
+            loginButton.textContent = 'Login';
             loginButton.style.backgroundColor = '#C0C0C0';
             loginButton.style.color = '#000';
-            loginButton.textContent = 'Login';
-            loginButton.removeChild(spinner);
-        }, 3000);
+
+            const imgElements = document.getElementsByClassName('img');
+            const logoElements = document.getElementsByClassName('logo');
+            const inputElements = document.getElementsByClassName('input');
+            const headlineElements = document.getElementsByClassName('headline');
+
+            const addClassToElements = (elements, className) => {
+                for (let i = 0; i < elements.length; i++) {
+                    elements[i].classList.add(className);
+                }
+            };
+
+            addClassToElements(imgElements, "reverseimg");
+            addClassToElements(logoElements, "reverselogo");
+            addClassToElements(inputElements, "reverseinput");
+            addClassToElements(headlineElements, "reverseheadline");
+
+        }, 1000);  // Adjust the delay for spinner display (1000ms = 1 second)
     });
 });
